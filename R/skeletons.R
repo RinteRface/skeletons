@@ -2,6 +2,7 @@
 #'
 #' @param tag Tag to be modified.
 #' @param effect Choose between "fade", "pulse" or "blink".
+#' @param type Skeleton type: \code{c("text", "block", "image", "avatar")}.
 #' @param duration Effect duration: 3000 ms by default.
 #'
 #' @return The input tag with additional class and javascript.
@@ -46,7 +47,7 @@
 #'  shinyApp(ui, server)
 #' }
 add_skeletons <- function(tag, effect = c("fade", "pulse", "blink"),
-                          type = c("block", "text"), duration = 3000) {
+                          type = c("text", "block", "image", "avatar"), duration = 3000) {
 
   effect <- match.arg(effect)
   type <- match.arg(type)
@@ -73,6 +74,20 @@ add_skeletons <- function(tag, effect = c("fade", "pulse", "blink"),
            // remove effect after given duration
            setTimeout(function() {
             setTextEffect(null);
+           }, %s);
+          "
+        } else if (type == "image") {
+          "setImageEffect('%s');
+           // remove effect after given duration
+           setTimeout(function() {
+            setImageEffect(null);
+           }, %s);
+          "
+        } else if (type == "avatar") {
+          "setAvatarEffect('%s');
+           // remove effect after given duration
+           setTimeout(function() {
+            setAvatarEffect(null);
            }, %s);
           "
         },

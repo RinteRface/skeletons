@@ -7,7 +7,7 @@
 add_skeletons(
   tag,
   effect = c("fade", "pulse", "blink"),
-  type = c("block", "text"),
+  type = c("text", "block", "image", "avatar"),
   duration = 3000
 )
 }
@@ -15,6 +15,8 @@ add_skeletons(
 \item{tag}{Tag to be modified.}
 
 \item{effect}{Choose between "fade", "pulse" or "blink".}
+
+\item{type}{Skeleton type: \code{c("text", "block", "image", "avatar")}.}
 
 \item{duration}{Effect duration: 3000 ms by default.}
 }

@@ -17,6 +17,7 @@ Imports:
     htmltools
 Suggests: 
     testthat,
-    shinyWidgets
+    shinyWidgets,
+    covr
 URL: https://github.com/RinteRface/skeletons
 BugReports: https://github.com/RinteRface/skeletons/issues
