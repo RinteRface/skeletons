@@ -58,7 +58,7 @@ add_skeletons <- function(tag, effect = c("fade", "pulse", "blink"),
     paste(tag$attribs$class, sprintf("skeleton-%s", type))
   }
 
-  tagList(
+  htmltools::tagList(
     tag,
     htmltools::tags$script(
       sprintf(
