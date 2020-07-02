@@ -1,0 +1,14 @@
+Package: skeletons
+Title: skeleton elements for Shiny apps
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "David",
+           family = "Granjon",
+           role = c("aut", "cre"),
+           email = "dgranjon@ymail.com")
+Description: R wrapper of the skeleton elements library: <https://skeleton-elements.dev/core/>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
